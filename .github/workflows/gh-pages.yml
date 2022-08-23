@@ -16,7 +16,9 @@ jobs:
           fetch-depth: 0
       
       - name: Insert setup branch
-        run: git checkout setup .
+        run: |
+          git pull origin setup --depth=1
+          git checkout setup .
 
       - name: Setup Node.js
         uses: actions/setup-node@v1
