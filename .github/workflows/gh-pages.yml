@@ -21,7 +21,7 @@ jobs:
           ref: 'setup'
           fetch-depth: 0
           path: _setup
-      - run: mv _setup/* .
+      - run: cp -r _setup/* .
 
       - name: Setup Node.js
         uses: actions/setup-node@v1
